@@ -1,3 +1,3 @@
-service rctd /system_ext/bin/rctd 
+service vendor.lge-lgatcmd-hal-1-0 /vendor/bin/hw/vendor.lge.hardware.lgatcmd@1.0-service
     override
     disabled

@@ -25,7 +25,6 @@
 
 # Construct your own list here
 REPLACE="
-/system/system_ext/app/RctProvider
 "
 
 ##########################################################################################

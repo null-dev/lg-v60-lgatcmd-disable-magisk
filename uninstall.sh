@@ -1,9 +1,9 @@
 _ui_print() {
-  echo "lg-v60-rct-disable-magisk: $1" >> /cache/magisk.log
+  echo "lg-v60-lgatcmd-disable-magisk: $1" >> /cache/magisk.log
 }
 
 _abort() {
-  echo "lg-v60-rct-disable-magisk ERROR: $1" >> /cache/magisk.log
+  echo "lg-v60-lgatcmd-disable-magisk ERROR: $1" >> /cache/magisk.log
   exit 1
 }
 
@@ -40,7 +40,8 @@ ui_print "Unpacking boot image ($BOOTIMAGE)..."
 
 ui_print "Removing overlay scripts from ramdisk..."
 "$NVBASE/magisk/magiskboot" cpio ramdisk.cpio \
-"rm overlay.d/lg-disable-rctd.rc"
+"rm overlay.d/lg-disable-lgatcmd.rc" \
+"rm overlay.d/system/etc/vintf/manifest.xml"
 
 ui_print "Repacking boot image..."
 "$NVBASE/magisk/magiskboot" repack "$BOOTIMAGE"
